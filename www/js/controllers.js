@@ -22,15 +22,15 @@ angular.module('app.controllers', [])
    
 .controller('jogoCtrl', function($scope) {
 	 // CREATE A REFERENCE TO FIREBASE
-    var messagesRef = new Firebase('https://crackling-fire-8527.firebaseio.com/nome');
+    var messagesRef = new Firebase('https://crackling-fire-8527.firebaseio.com/nome/');
 
     // REGISTER DOM ELEMENTS
-    var messageField = $('#messageInput');
-    var nameField = $('#nameInput');
+  //  var messageField = $('#messageInput');
+    //var nameField = $('#nameInput');
     var messageList = $('#game-messages');
 
     // LISTEN FOR KEYPRESS EVENT
-    messageField.keypress(function (e) {
+  /*  messageField.keypress(function (e) {
       if (e.keyCode == 13) {
         //FIELD VALUES
         var username = nameField.val();
@@ -40,7 +40,7 @@ angular.module('app.controllers', [])
         messagesRef.push({name:username, text:message});
         messageField.val('');
       }
-    });
+    }); */
 
     // Add a callback that is triggered for each chat message.
     messagesRef.limitToLast(10).on('child_added', function (snapshot) {
