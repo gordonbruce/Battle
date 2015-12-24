@@ -28,7 +28,7 @@ angular.module('app.controllers', [])
   //  var messageField = $('#messageInput');
     //var nameField = $('#nameInput');
     var messageList = $('#game-messages');
-
+    alert();
     // LISTEN FOR KEYPRESS EVENT
   /*  messageField.keypress(function (e) {
       if (e.keyCode == 13) {
@@ -49,7 +49,7 @@ angular.module('app.controllers', [])
       var username = data.name || "anonymous";
       var message = data.text;
   
-      var messageText = "<a class='item item-avatar' href='#'><img src='https://en.gravatar.com/avatar/717ee15a5d86c2b8eded5a80adc58e30.jpg?d=retro&size=80'><h2>"+username+"</h2><p>"+message+"</p></a>";
+      var messageText = '<a class="item item-avatar" href="#"><img src="https://en.gravatar.com/avatar/717ee15a5d86c2b8eded5a80adc58e30.jpg?d=retro&size=80"><h2>'+username+'</h2><p>'+message+'</p></a>';
 
       //ADD MESSAGE
       $('#game-messages').append(messageText);
