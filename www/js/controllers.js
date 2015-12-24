@@ -22,9 +22,9 @@ angular.module('app.controllers', [])
    
 .controller('jogoCtrl', function($scope) {
 	 // CREATE A REFERENCE TO FIREBASE
-    var messagesRef = new Firebase('https://crackling-fire-8527.firebaseio.com/nome/');
+    
     setTimeout(function(){
-
+      var messagesRef = new Firebase('https://crackling-fire-8527.firebaseio.com/nome/');
        alert('teste1');
 
         // REGISTER DOM ELEMENTS
