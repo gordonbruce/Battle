@@ -52,9 +52,11 @@ angular.module('app.controllers', [])
       var messageText = "<a class='item item-avatar' href='#'><img src='https://en.gravatar.com/avatar/717ee15a5d86c2b8eded5a80adc58e30.jpg?d=retro&size=80'><h2>"+username+"</h2><p>"+message+"</p></a>";
 
       //ADD MESSAGE
-      messageList.append(messageText);
+      $('#game-messages').append(messageText);
+      $('#game-messages').scrollTop($('#game-messages')[0].scrollHeight);
+    
 
-      messageList[0].scrollTop = messageList[0].scrollHeight;
+    //  messageList[0].scrollTop = messageList[0].scrollHeight;
 
     });
 })
