@@ -46,23 +46,9 @@ angular.module('app.controllers', [])
           }
         }); */
 
-        //Recuperando a informação
-        messagesRef.on("value", function(snapshot) {
-          alert('teste3');
-          var data = snapshot.val();
-          var username = data.name || "anonymous";
-          var message = data.text;
-      
-          var messageText = '<a class="item item-avatar" href="#"><img src="https://en.gravatar.com/avatar/717ee15a5d86c2b8eded5a80adc58e30.jpg?d=retro&size=80"><h2>'+username+'</h2><p>'+message+'</p></a>';
+       
 
-          //ADD MESSAGE
-          $('#game-messages').append(messageText);
-          $('#game-messages').scrollTop($('#game-messages')[0].scrollHeight);
-        }, function (errorObject) {
-          console.log("The read failed: " + errorObject.code);
-        });
-
-       /* // Add a callback that is triggered for each chat message.
+       // Add a callback that is triggered for each chat message.
         messagesRef.limitToLast(10).on('child_added', function (snapshot) {
           //GET DATA
            alert('teste');
@@ -79,7 +65,7 @@ angular.module('app.controllers', [])
 
         //  messageList[0].scrollTop = messageList[0].scrollHeight;
 
-        });*/
+        });
     },9000);
    
 })
