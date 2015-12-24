@@ -20,15 +20,15 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('jogoCtrl', function($scope) {
+.controller('jogoCtrl', function($scope, Mensagens) {
 	 // CREATE A REFERENCE TO FIREBASE
-    var messagesRef = new Firebase('https://crackling-fire-8527.firebaseio.com/nome/');
+    messagesRef = Mensagens;
 
     // REGISTER DOM ELEMENTS
   //  var messageField = $('#messageInput');
     //var nameField = $('#nameInput');
     var messageList = $('#game-messages');
-    alert();
+   
     // LISTEN FOR KEYPRESS EVENT
   /*  messageField.keypress(function (e) {
       if (e.keyCode == 13) {
