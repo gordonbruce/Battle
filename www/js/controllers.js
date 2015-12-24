@@ -24,10 +24,7 @@ angular.module('app.controllers', [])
 	 // CREATE A REFERENCE TO FIREBASE
     
     setTimeout(function(){
-      alert('teste1');
-      var messagesRef = new Firebase('https://crackling-fire-8527.firebaseio.com/nome/');
-       
-      alert('teste2');
+     
         // REGISTER DOM ELEMENTS
       //  var messageField = $('#messageInput');
         //var nameField = $('#nameInput');
@@ -51,7 +48,7 @@ angular.module('app.controllers', [])
        // Add a callback that is triggered for each chat message.
         messagesRef.limitToLast(10).on('child_added', function (snapshot) {
           //GET DATA
-           alert('teste');
+          
           var data = snapshot.val();
           var username = data.name || "anonymous";
           var message = data.text;
@@ -66,7 +63,7 @@ angular.module('app.controllers', [])
         //  messageList[0].scrollTop = messageList[0].scrollHeight;
 
         });
-    },9000);
+    },1000);
    
 })
  
