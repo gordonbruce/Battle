@@ -22,9 +22,10 @@ angular.module('app.controllers', [])
    
 .controller('jogoCtrl', function($scope) {
 	 // CREATE A REFERENCE TO FIREBASE
+    var messagesRef = new Firebase('https://crackling-fire-8527.firebaseio.com/nome/');
     setTimeout(function(){
 
-       var messagesRef = new Firebase('https://crackling-fire-8527.firebaseio.com/nome/');
+       alert('teste1');
 
         // REGISTER DOM ELEMENTS
       //  var messageField = $('#messageInput');
@@ -46,6 +47,7 @@ angular.module('app.controllers', [])
 
         //Recuperando a informação
         messagesRef.on("value", function(snapshot) {
+          alert('teste2');
           var data = snapshot.val();
           var username = data.name || "anonymous";
           var message = data.text;
