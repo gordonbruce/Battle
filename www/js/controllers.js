@@ -24,9 +24,10 @@ angular.module('app.controllers', [])
 	 // CREATE A REFERENCE TO FIREBASE
     
     setTimeout(function(){
+      alert('teste1');
       var messagesRef = new Firebase('https://crackling-fire-8527.firebaseio.com/nome/');
-       alert('teste1');
-
+       
+      alert('teste2');
         // REGISTER DOM ELEMENTS
       //  var messageField = $('#messageInput');
         //var nameField = $('#nameInput');
@@ -47,7 +48,7 @@ angular.module('app.controllers', [])
 
         //Recuperando a informação
         messagesRef.on("value", function(snapshot) {
-          alert('teste2');
+          alert('teste3');
           var data = snapshot.val();
           var username = data.name || "anonymous";
           var message = data.text;
@@ -79,7 +80,7 @@ angular.module('app.controllers', [])
         //  messageList[0].scrollTop = messageList[0].scrollHeight;
 
         });*/
-    },10000);
+    },9000);
    
 })
  
